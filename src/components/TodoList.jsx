@@ -37,15 +37,21 @@ const TodoList = () => {
   };
 
   return (
-    <div>
-      <h1>What's the Plan for Today?</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        updateTodo={updateTodo}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-      />
+    <div className="container">
+      <div className="row flex-column d-center">
+        <div className="col mx-auto">
+          <h1 className="text-center mt-5">What's the Plan for Today?</h1>
+        </div>
+        <div className="col flex-column d-flex mx-auto ">
+          <TodoForm onSubmit={addTodo} />
+          <Todo
+            todos={todos}
+            updateTodo={updateTodo}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+          />
+        </div>
+      </div>
     </div>
   );
 };
